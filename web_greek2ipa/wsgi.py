@@ -1,5 +1,5 @@
 """
-WSGI config for greek2ipa project.
+WSGI config for web_greek2ipa project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'greek2ipa.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'web_greek2ipa.settings')
 
 application = get_wsgi_application()
