@@ -12,6 +12,7 @@ def main(request):
         phonemic, phonetic = g2ipa.main(input)
 
         args['phonemic'] = phonemic
+        args['phonemic_split'] = phonemic_split
         args['phonetic'] = phonetic
 
     return render(request, 'main.html', args)
