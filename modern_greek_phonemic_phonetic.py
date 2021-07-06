@@ -710,7 +710,7 @@ greek_patterns_phonetic = [
 greek_patterns_remove_final_br = [
 
 
-    [re.compile("\\n"), ""],
+    [re.compile(" /"), "/"],
 
 
         ]
