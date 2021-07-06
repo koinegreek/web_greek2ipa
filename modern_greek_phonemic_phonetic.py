@@ -778,4 +778,4 @@ def main(words):
     phonetic = remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(words))))
 
 
-    return phonemic, phonetic
+return phonemic, phonetic
