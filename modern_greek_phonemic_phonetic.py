@@ -184,6 +184,30 @@ greek_patterns_phonemic = [
     [re.compile("οὑ"), "ου"],
     [re.compile("οὐ"), "ου"],
 
+    [re.compile("αὔ"), "αύ"],
+    [re.compile("αὕ"), "αύ"],
+    [re.compile("αὒ"), "αύ"],
+    [re.compile("αὓ"), "αύ"],
+    [re.compile("αὖ"), "αύ"],
+    [re.compile("αὗ"), "αύ"],
+    [re.compile("αῦ"), "αύ"],
+    [re.compile("αὺ"), "αύ"],
+
+    [re.compile("αὑ"), "αυ"],
+    [re.compile("αὐ"), "αυ"],
+
+    [re.compile("εὔ"), "εύ"],
+    [re.compile("εὕ"), "εύ"],
+    [re.compile("εὒ"), "εύ"],
+    [re.compile("εὓ"), "εύ"],
+    [re.compile("εὖ"), "εύ"],
+    [re.compile("εὗ"), "εύ"],
+    [re.compile("εῦ"), "εύ"],
+    [re.compile("εὺ"), "εύ"],
+
+    [re.compile("εὑ"), "ευ"],
+    [re.compile("εὐ"), "ευ"],
+
     [re.compile("ἴ"), "ί"],
     [re.compile("ἵ"), "ί"],
     [re.compile("ἲ"), "ί"],
