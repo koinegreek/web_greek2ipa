@@ -10,7 +10,7 @@
       <br>
     <form class="" action="" method="post">
       {% csrf_token %}
-      <textarea name="input" rows="4" cols="80" color="blue">{{request.POST.input}}</textarea>
+      <textarea name="input" rows="4" cols="80">Type Greek here{{request.POST.input}}</textarea>
       <br>
       <textarea rows="4" cols="80">{{phonemic}}</textarea>
       <br>
