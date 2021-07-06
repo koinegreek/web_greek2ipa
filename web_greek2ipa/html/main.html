@@ -23,7 +23,7 @@
     var inputText = document.getElementById("inputField");
     inputText.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
-    event.preventDefault();
+    event.preventDefault(event.keyCode === 13);
     document.getElementById("alertBtn").click();
     }
     });
