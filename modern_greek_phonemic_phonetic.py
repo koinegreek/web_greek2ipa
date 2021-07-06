@@ -707,14 +707,6 @@ greek_patterns_phonetic = [
 
 ]
 
-greek_patterns_remove_final_br = [
-
-
-    [re.compile(f"\n"), ""],
-
-
-        ]
-
 
 
 def transcribed_case_and_stress(word):
@@ -772,13 +764,6 @@ def remove_acute(word):
     else:
         return word
 
-def delete_br(word):
-    """Transcribe a Greek word"""
-    for pattern, replace in greek_patterns_remove_final_br:
-        word = pattern.sub(replace, word)
-    return word
-
-
 
 def main(words):
 
@@ -789,8 +774,8 @@ def main(words):
     #    output.append("/"+transcribed_phonemic(word)+"/")
     #    #print("[",remove_acute(convert_stress(transcribed_phonetic(word))),"]")
 
-    phonemic = "/"+delete_br(transcribed_phonemic(transcribed_case_and_stress(words)))+"/"
-    phonetic = "["+delete_br(remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(words)))))+"]"
+    phonemic = "/"+transcribed_phonemic(transcribed_case_and_stress(words))+"/"
+    phonetic = "["+remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(words))))+"]"
 
     return phonemic, phonetic
 
