@@ -776,21 +776,8 @@ def main(words):
 
     words = words.split(" ")
 
-    #output = []
-    #for word in words:
-    #    output.append("/"+transcribed_phonemic(word)+"/")
-    #    #print("[",remove_acute(convert_stress(transcribed_phonetic(word))),"]")
 
     phonemic = "/"+transcribed_phonemic(transcribed_case_and_stress(words))+"/"
     phonetic = "["+remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(words))))+"]"
 
     return phonemic, phonetic
-
-
-if __name__ == '__main__':
-    # test_words = input("Type a word in Greek: ")
-    test_words = 'λέγω σοι τά πάντα. εν αρχή ην ο λόγος'
-
-    print(
-        main(test_words)
-    )
