@@ -85,6 +85,8 @@ greek_patterns_case_and_stress = [
 
 ##making_everything_lowercase_START###
 
+    [re.compile("Αὐ"), "αὐ"],
+
     [re.compile("Β"), "β"],
     [re.compile("Γ"), "γ"],
     [re.compile("Δ"), "δ"],
