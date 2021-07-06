@@ -133,6 +133,9 @@ greek_patterns_phonemic = [
     [re.compile("οῖ"), "οί"],
     [re.compile("οὶ"), "οί"],
 
+    [re.compile("οἱ"), "οι"],
+    [re.compile("οἰ"), "οι"],
+
     [re.compile("εἴ"), "εί"],
     [re.compile("εἵ"), "εί"],
     [re.compile("εἲ"), "εί"],
@@ -141,6 +144,9 @@ greek_patterns_phonemic = [
     [re.compile("εἷ"), "εί"],
     [re.compile("εῖ"), "εί"],
     [re.compile("εὶ"), "εί"],
+
+    [re.compile("εἱ"), "ει"],
+    [re.compile("εἰ"), "ει"],
 
     [re.compile("αἴ"), "αί"],
     [re.compile("αἵ"), "αί"],
@@ -151,6 +157,9 @@ greek_patterns_phonemic = [
     [re.compile("αῖ"), "αί"],
     [re.compile("αὶ"), "αί"],
 
+    [re.compile("αἱ"), "αι"],
+    [re.compile("αἰ"), "αι"],
+
     [re.compile("υἴ"), "υί"],
     [re.compile("υἵ"), "υί"],
     [re.compile("υἲ"), "υί"],
@@ -159,6 +168,9 @@ greek_patterns_phonemic = [
     [re.compile("υἷ"), "υί"],
     [re.compile("υῖ"), "υί"],
     [re.compile("υὶ"), "υί"],
+
+    [re.compile("υἱ"), "υι"],
+    [re.compile("υἰ"), "υι"],
 
     [re.compile("οὔ"), "ού"],
     [re.compile("οὕ"), "ού"],
@@ -169,6 +181,9 @@ greek_patterns_phonemic = [
     [re.compile("οῦ"), "ού"],
     [re.compile("οὺ"), "ού"],
 
+    [re.compile("οὑ"), "ου"],
+    [re.compile("οὐ"), "ου"],
+
     [re.compile("ἴ"), "ί"],
     [re.compile("ἵ"), "ί"],
     [re.compile("ἲ"), "ί"],
@@ -178,6 +193,9 @@ greek_patterns_phonemic = [
     [re.compile("ῖ"), "ί"],
     [re.compile("ὶ"), "ί"],
 
+    [re.compile("ἰ"), "ι"],
+    [re.compile("ἱ"), "ι"],
+
     [re.compile("ὔ"), "ύ"],
     [re.compile("ὕ"), "ύ"],
     [re.compile("ὒ"), "ύ"],
@@ -186,6 +204,9 @@ greek_patterns_phonemic = [
     [re.compile("ὗ"), "ύ"],
     [re.compile("ῦ"), "ύ"],
     [re.compile("ὺ"), "ύ"],
+
+    [re.compile("ὐ"), "υ"],
+    [re.compile("ὑ"), "υ"],
 
     [re.compile("ἤ"), "ή"],
     [re.compile("ἥ"), "ή"],
@@ -200,11 +221,17 @@ greek_patterns_phonemic = [
     [re.compile("ῄ"), "ή"],
     [re.compile("ῃ"), "η"],
 
+    [re.compile("ἡ"), "η"],
+    [re.compile("ἠ"), "η"],
+
     [re.compile("ἔ"), "έ"],
     [re.compile("ἕ"), "έ"],
     [re.compile("ἒ"), "έ"],
     [re.compile("ἓ"), "έ"],
     [re.compile("ὲ"), "έ"],
+
+    [re.compile("ἐ"), "ε"],
+    [re.compile("ἑ"), "ε"],
 
     [re.compile("ἄ"), "ά"],
     [re.compile("ἅ"), "ά"],
@@ -219,11 +246,17 @@ greek_patterns_phonemic = [
     [re.compile("ᾴ"), "ά"],
     [re.compile("ᾳ"), "α"],
 
+    [re.compile("ἀ"), "α"],
+    [re.compile("ἁ"), "α"],
+
     [re.compile("ὄ"), "ό"],
     [re.compile("ὅ"), "ό"],
     [re.compile("ὂ"), "ό"],
     [re.compile("ὃ"), "ό"],
     [re.compile("ὸ"), "ό"],
+
+    [re.compile("ὀ"), "ο"],
+    [re.compile("ὁ"), "ο"],
 
     [re.compile("ὤ"), "ώ"],
     [re.compile("ὥ"), "ώ"],
@@ -238,6 +271,8 @@ greek_patterns_phonemic = [
     [re.compile("ῴ"), "ώ"],
     [re.compile("ῳ"), "ω"],
 
+    [re.compile("ὠ"), "ω"],
+    [re.compile("ὡ"), "ω"],
 
 ###converting to modern accent done###
 
