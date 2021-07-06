@@ -10,22 +10,27 @@
       <br>
     <form class="" action="" method="post">
       {% csrf_token %}
-      <textarea name="input" id="inputField" rows="4" cols="80" placeholder="Type Greek text here ... ">{{request.POST.input}}</textarea>
+      <textarea name="input" id="myInput" rows="4" cols="80" placeholder="Type Greek text here ... ">{{request.POST.input}}</textarea>
       <br>
       <textarea rows="4" cols="80" placeholder="/phonemic/ transcription will appear here ... ">{{phonemic}}</textarea>
       <br>
       <textarea rows="4" cols="80" placeholder="[phonetic] transcription will appear here ... ">{{phonetic}}</textarea>
       <br>
-      <button type="submit" id="alertBtn" name="button">Transcribe</button>
+      <button type="submit" id="myBtn" name="button">Transcribe</button>
     </form>
 
     <script>
-    var inputText = document.getElementById("inputField");
-    inputText.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-    event.preventDefault(event.keyCode === 13);
-    document.getElementById("alertBtn").click();
-    }
+    var input = document.getElementById("myInput");
+
+    // Execute a function when the user releases a key on the keyboard
+    input.addEventListener("keyup", function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("myBtn").click();
+      }
     });
     </script>
 
