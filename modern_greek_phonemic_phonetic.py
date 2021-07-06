@@ -780,4 +780,4 @@ def main(word):
 phonemic = phonemic1.split()
 phonetic = phonetic1.split()
 
-    return phonemic, phonetic
+return phonemic, phonetic
