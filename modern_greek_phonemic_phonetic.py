@@ -772,7 +772,7 @@ def remove_acute(word):
         return word
 
 def split_time(word):
-    for word
+    for word in words
         return word.split()
 
 def main(words):
