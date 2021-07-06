@@ -772,10 +772,12 @@ def remove_acute(word):
         return word
 
 
+phonemic1 = transcribed_phonemic(transcribed_case_and_stress(word))
+
 def main(word):
 
 
-    phonemic = transcribed_phonemic(transcribed_case_and_stress(word))
+    phonemic = phonemic1
     phonetic = remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(word))))
 
     return phonemic, phonetic
