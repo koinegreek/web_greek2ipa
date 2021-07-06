@@ -711,9 +711,9 @@ greek_patterns_remove_final_br = [
 
 
     [re.compile("
-    /"), "/"],
+]"), "]"],
     [re.compile("
-    ]"), "]"],
+/]"), "/"],
 
         ]
 
