@@ -770,13 +770,3 @@ def remove_acute(word):
         return re.sub(pattern15, new_pattern15, word)
     else:
         return word
-
-
-def main(words):
-
-
-    phonemic = asd
-    phonetic = "["+remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(words))))+"]"
-
-
-    return phonemic, phonetic
