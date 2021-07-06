@@ -773,9 +773,9 @@ def remove_acute(word):
 
 def main(words):
 
-    x = transcribed_phonemic(transcribed_case_and_stress(words))
+    x = words
 
-    phonemic = "split"+x.split(". ")+"split"    
+    phonemic = "test"+transcribed_phonemic(transcribed_case_and_stress(x))+"test"
     phonetic = "["+remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(words))))+"]"
 
 
