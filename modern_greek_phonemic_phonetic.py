@@ -85,8 +85,6 @@ greek_patterns_case_and_stress = [
 
 ##making_everything_lowercase_START###
 
-    [re.compile("Οὕτως"), "οὕτως"],
-
     [re.compile("Β"), "β"],
     [re.compile("Γ"), "γ"],
     [re.compile("Δ"), "δ"],
@@ -776,7 +774,7 @@ def remove_acute(word):
 
 def main(words):
 
-    #words = words.split("  ")
+    words = words.split(" ")
 
     #output = []
     #for word in words:
