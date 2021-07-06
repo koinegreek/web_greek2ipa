@@ -12,7 +12,7 @@
       {% csrf_token %}
       <textarea name="input" id="myInput" rows="4" cols="80" placeholder="Type Greek text here ... ">{{request.POST.input}}</textarea>
       <br>
-      <textarea rows="4" cols="80" placeholder="/phonemic/ transcription will appear here ... ">{{phonemic123}}</textarea>
+      <textarea rows="4" cols="80" placeholder="/phonemic/ transcription will appear here ... ">{{phonetic}}</textarea>
       <br>
       <textarea rows="4" cols="80" placeholder="[phonetic] transcription will appear here ... ">{{phonetic}}</textarea>
       <br>
