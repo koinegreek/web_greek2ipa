@@ -1,5 +1,7 @@
 import re
 
+word.split(". ")
+
 voiced_consonants_and_vowels = "β|γ|δ|ζ|λ|ν|ρ|ντ|μπ|ϊ|ει|η|υ|υι|οι|ε|αι|α|ο|ω|ου|ΐ|ή|ύ|υί|οί|έ|αί|ά|ό|ώ|ού"
 vowels = "ϊ|ει|η|υ|υι|οι|ε|αι|α|ο|ω|ου|ΐ|ή|ύ|υί|οί|έ|αί|ά|ό|ώ|ού"
 
@@ -771,8 +773,6 @@ def remove_acute(word):
     else:
         return word
 
-
-word = word.split(". ")
 
 def main(word):
 
