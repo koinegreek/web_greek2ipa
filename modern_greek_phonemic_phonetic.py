@@ -81,9 +81,9 @@ new_pattern14 = "o̞"
 pattern15 = "ú"
 new_pattern15 = "u"
 
+greek_patterns_case_and_stress = [
 
-greek_patterns_phonemic = [
-
+##making_everything_lowercase_START###
 
     [re.compile("Β"), "β"],
     [re.compile("Γ"), "γ"],
@@ -106,23 +106,98 @@ greek_patterns_phonemic = [
     [re.compile("Ϊ"), "ϊ"],
     [re.compile("Ι"), "ι"],
     [re.compile("Ί"), "ί"],
-    [re.compile("Η"), "η"],
-    [re.compile("Ή"), "ή"],
-    [re.compile("Υ"), "υ"],
-    [re.compile("Ύ"), "ύ"],
-    [re.compile("Ε"), "ε"],
-    [re.compile("Έ"), "έ"],
-    [re.compile("Α"), "α"],
-    [re.compile("Ά"), "ά"],
-    [re.compile("Ο"), "ο"],
-    [re.compile("Ό"), "ό"],
-    [re.compile("Ω"), "ω"],
-    [re.compile("Ώ"), "ώ"],
+    [re.compile("Ἴ"), "ί"],
+    [re.compile("Ἵ"), "ί"],
+    [re.compile("Ἲ"), "ί"],
+    [re.compile("Ἳ"), "ί"],
+    [re.compile("Ἶ"), "ί"],
+    [re.compile("Ἷ"), "ί"],
+    [re.compile("Ὶ"), "ί"],
+    [re.compile("Ἰ"), "ί"],
+    [re.compile("Ἱ"), "ί"],
+
+    [re.compile("῎Υ"), "ύ"],
+    [re.compile("Ὕ"), "ύ"],
+    [re.compile("῍Υ"), "ύ"],
+    [re.compile("Ὓ"), "ύ"],
+    [re.compile("῏Υ"), "ύ"],
+    [re.compile("Ὗ"), "ύ"],
+    [re.compile("῀Υ"), "ύ"],
+    [re.compile("Ὺ"), "ύ"],
+
+    [re.compile("᾽Υ"), "υ"],
+    [re.compile("Ὑ"), "υ"],
+
+    [re.compile("Ἤ"), "ή"],
+    [re.compile("Ἥ"), "ή"],
+    [re.compile("Ἢ"), "ή"],
+    [re.compile("Ἣ"), "ή"],
+    [re.compile("Ἦ"), "ή"],
+    [re.compile("Ἧ"), "ή"],
+    [re.compile("῀Η"), "ή"],
+    [re.compile("Ὴ"), "ή"],
+
+    [re.compile("῀ιΗ"), "ή"],
+    [re.compile("´ͅΗ"), "ή"],
+    [re.compile("ῌ"), "η"],
+
+    [re.compile("Ἡ"), "η"],
+    [re.compile("Ἠ"), "η"],
+
+    [re.compile("Ἔ"), "έ"],
+    [re.compile("Ἕ"), "έ"],
+    [re.compile("Ἒ"), "έ"],
+    [re.compile("Ἓ"), "έ"],
+    [re.compile("Ὲ"), "έ"],
+
+    [re.compile("Ἐ"), "ε"],
+    [re.compile("Ἑ"), "ε"],
+
+    [re.compile("Ἄ"), "ά"],
+    [re.compile("Ἅ"), "ά"],
+    [re.compile("Ἂ"), "ά"],
+    [re.compile("Ἃ"), "ά"],
+    [re.compile("Ἆ"), "ά"],
+    [re.compile("Ἇ"), "ά"],
+    [re.compile("῀Α"), "ά"],
+    [re.compile("Ὰ"), "ά"],
+
+    [re.compile("῀ιΑ"), "ά"],
+    [re.compile("´ͅΑ"), "ά"],
+    [re.compile("ᾼ"), "α"],
+
+    [re.compile("Ἀ"), "α"],
+    [re.compile("Ἁ"), "α"],
+
+    [re.compile("Ὄ"), "ό"],
+    [re.compile("Ὅ"), "ό"],
+    [re.compile("Ὂ"), "ό"],
+    [re.compile("Ὃ"), "ό"],
+    [re.compile("Ὸ"), "ό"],
+
+    [re.compile("Ὀ"), "ο"],
+    [re.compile("Ὁ"), "ο"],
+
+    [re.compile("Ὤ"), "ώ"],
+    [re.compile("Ὥ"), "ώ"],
+    [re.compile("Ὤ"), "ώ"],
+    [re.compile("Ὣ"), "ώ"],
+    [re.compile("Ὦ"), "ώ"],
+    [re.compile("Ὧ"), "ώ"],
+    [re.compile("῀Ω"), "ώ"],
+    [re.compile("Ὼ"), "ώ"],
+
+    [re.compile("῀ιΩ"), "ώ"],
+    [re.compile("´ͅΩ"), "ώ"],
+    [re.compile("ῼ"), "ω"],
+
+    [re.compile("Ὠ"), "ω"],
+    [re.compile("Ὡ"), "ω"],
 
 
-#making_everything_lowercase
+#making_everything_lowercase_END
 
-#first regularise diphthong accents, then vowels#
+#regularise_accents_to_modern_stress_START#
 
     [re.compile("οἴ"), "οί"],
     [re.compile("οἵ"), "οί"],
@@ -298,7 +373,14 @@ greek_patterns_phonemic = [
     [re.compile("ὠ"), "ω"],
     [re.compile("ὡ"), "ω"],
 
-###converting to modern accent done###
+###regularise_accents_to_modern_stress_END###
+
+
+]
+
+greek_patterns_phonemic = [
+
+
 
     [re.compile("γγ"), "nk"],
     [re.compile("γξ"), "nks"],
@@ -430,44 +512,6 @@ greek_patterns_phonemic = [
 ]
 
 greek_patterns_phonetic = [
-
-
-    [re.compile("Β"), "β"],
-    [re.compile("Γ"), "γ"],
-    [re.compile("Δ"), "δ"],
-    [re.compile("Ζ"), "ζ"],
-    [re.compile("Θ"), "θ"],
-    [re.compile("Κ"), "κ"],
-    [re.compile("Λ"), "λ"],
-    [re.compile("Μ"), "μ"],
-    [re.compile("Ν"), "ν"],
-    [re.compile("Ξ"), "ξ"],
-    [re.compile("Π"), "π"],
-    [re.compile("Ρ"), "ρ"],
-    [re.compile("Σ"), "σ"],
-    [re.compile("Τ"), "τ"],
-    [re.compile("Φ"), "φ"],
-    [re.compile("Χ"), "χ"],
-    [re.compile("Ψ"), "ψ"],
-
-    [re.compile("Ϊ"), "ϊ"],
-    [re.compile("Ι"), "ι"],
-    [re.compile("Ί"), "ί"],
-    [re.compile("Η"), "η"],
-    [re.compile("Ή"), "ή"],
-    [re.compile("Υ"), "υ"],
-    [re.compile("Ύ"), "ύ"],
-    [re.compile("Ε"), "ε"],
-    [re.compile("Έ"), "έ"],
-    [re.compile("Α"), "α"],
-    [re.compile("Ά"), "ά"],
-    [re.compile("Ο"), "ο"],
-    [re.compile("Ό"), "ό"],
-    [re.compile("Ω"), "ω"],
-    [re.compile("Ώ"), "ώ"],
-
-
-#making_everything_lowercase
 
 
     [re.compile("γγ"), "nk"],
@@ -664,7 +708,11 @@ greek_patterns_phonetic = [
 ]
 
 
-
+def transcribed_case_and_stress(word):
+    """Transcribe a Greek word"""
+    for pattern, replace in greek_patterns_case_and_stress:
+        word = pattern.sub(replace, word)
+    return word
 
 def transcribed_phonemic(word):
     """Transcribe a Greek word"""
@@ -725,8 +773,8 @@ def main(words):
     #    output.append("/"+transcribed_phonemic(word)+"/")
     #    #print("[",remove_acute(convert_stress(transcribed_phonetic(word))),"]")
 
-    phonemic = "/"+transcribed_phonemic(words)+"/"
-    phonetic = "["+remove_acute(convert_stress(transcribed_phonetic(words)))+"]"
+    phonemic = "/"+transcribed_phonemic(transcribed_case_and_stress(words))+"/"
+    phonetic = "["+remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(words))))+"]"
 
     return phonemic, phonetic
 
