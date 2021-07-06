@@ -116,6 +116,7 @@ greek_patterns_case_and_stress = [
     [re.compile("Ἰ"), "ί"],
     [re.compile("Ἱ"), "ί"],
 
+    [re.compile("Υ"), "υ"],
     [re.compile("῎Υ"), "ύ"],
     [re.compile("Ὕ"), "ύ"],
     [re.compile("῍Υ"), "ύ"],
@@ -128,6 +129,7 @@ greek_patterns_case_and_stress = [
     [re.compile("᾽Υ"), "υ"],
     [re.compile("Ὑ"), "υ"],
 
+    [re.compile("Η"), "η"],
     [re.compile("Ἤ"), "ή"],
     [re.compile("Ἥ"), "ή"],
     [re.compile("Ἢ"), "ή"],
@@ -144,6 +146,7 @@ greek_patterns_case_and_stress = [
     [re.compile("Ἡ"), "η"],
     [re.compile("Ἠ"), "η"],
 
+    [re.compile("Ε"), "ε"],
     [re.compile("Ἔ"), "έ"],
     [re.compile("Ἕ"), "έ"],
     [re.compile("Ἒ"), "έ"],
@@ -153,6 +156,8 @@ greek_patterns_case_and_stress = [
     [re.compile("Ἐ"), "ε"],
     [re.compile("Ἑ"), "ε"],
 
+
+    [re.compile("Α"), "α"],
     [re.compile("Ἄ"), "ά"],
     [re.compile("Ἅ"), "ά"],
     [re.compile("Ἂ"), "ά"],
@@ -169,6 +174,7 @@ greek_patterns_case_and_stress = [
     [re.compile("Ἀ"), "α"],
     [re.compile("Ἁ"), "α"],
 
+    [re.compile("Ο"), "ο"],
     [re.compile("Ὄ"), "ό"],
     [re.compile("Ὅ"), "ό"],
     [re.compile("Ὂ"), "ό"],
@@ -178,6 +184,7 @@ greek_patterns_case_and_stress = [
     [re.compile("Ὀ"), "ο"],
     [re.compile("Ὁ"), "ο"],
 
+    [re.compile("Ω"), "ω"],
     [re.compile("Ὤ"), "ώ"],
     [re.compile("Ὥ"), "ώ"],
     [re.compile("Ὤ"), "ώ"],
