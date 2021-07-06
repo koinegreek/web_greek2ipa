@@ -775,7 +775,7 @@ def main(words):
 
     x = transcribed_phonemic(transcribed_case_and_stress(words))
 
-    phonemic = "/"+x+"/"    
+    phonemic = "dd"+x+"dd"    
     phonetic = "["+remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(words))))+"]"
 
 
