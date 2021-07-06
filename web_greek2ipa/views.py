@@ -9,9 +9,9 @@ def main(request):
         post = request.POST
         input = post.get('input')
 
-        phonemic_split, phonetic = g2ipa.main(input)
+        phonemic, phonetic = g2ipa.main(input)
 
-        args['phonemic_split'] = phonemic_split
+        args['phonemic'] = phonemic
         args['phonetic'] = phonetic
 
     return render(request, 'main.html', args)
