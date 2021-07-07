@@ -776,7 +776,7 @@ def greek_split(word):
 
 def iterate_phonetic(word):
     for item in ['λόγος', 'σάρξ', 'εγένετο']:
-        return item
+        return(item)
 
 def main(word):
 
