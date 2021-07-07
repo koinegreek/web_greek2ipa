@@ -775,9 +775,9 @@ def greek_split(word):
     return word.split()
 
 def greek_split2(word):
-    phonetic1 = greek_split(word)
-    
-    return phonetic1
+    xyz = greek_split(word)
+
+    return xyz
 
 def main(word):
 
