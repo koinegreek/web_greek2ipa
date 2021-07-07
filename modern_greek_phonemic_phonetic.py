@@ -779,7 +779,8 @@ def iterate_phonetic(word):
     xyz = greek_split(word)
 
     for item in greek_split(word):
-        print(remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(item)))))
+        result = remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(item))))
+        return result
 
 def main(word):
 
