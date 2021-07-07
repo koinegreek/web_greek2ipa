@@ -776,7 +776,7 @@ def greek_split(word):
 
 def greek_split2(word):
     xyz = greek_split(word)
-    for word in xyz
+    for word in xyz:
     return word
 
 def main(word):
