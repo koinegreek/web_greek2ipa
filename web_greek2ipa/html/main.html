@@ -32,11 +32,11 @@
       <br>
     <form class="" action="" method="post">
       {% csrf_token %}
-      <textarea style="max-width: 90%; min-width: 50%; min-width: 400px; font-size: 3.0vh" name="input" id="myInput" rows="3" placeholder="Type Greek text here ... ">{{request.POST.input}}</textarea>
+      <textarea style="max-width: 90%; min-width: 50%; min-width: 320px; font-size: 3.0vh" name="input" id="myInput" rows="3" placeholder="Type Greek text here ... ">{{request.POST.input}}</textarea>
       <br>
-      <textarea style="max-width: 90%; min-width: 50%; min-width: 400px; font-size: 3.0vh" rows="3" placeholder="/phonemic/ transcription will appear here ... ">{{phonemic}}</textarea>
+      <textarea style="max-width: 90%; min-width: 50%; min-width: 320px; font-size: 3.0vh" rows="3" placeholder="/phonemic/ transcription will appear here ... ">{{phonemic}}</textarea>
       <br>
-      <textarea style="max-width: 90%; min-width: 50%; min-width: 400px; font-size: 3.0vh" rows="3" placeholder="[phonetic] transcription will appear here ... ">{{phonetic}}</textarea>
+      <textarea style="max-width: 90%; min-width: 50%; min-width: 320px; font-size: 3.0vh" rows="3" placeholder="[phonetic] transcription will appear here ... ">{{phonetic}}</textarea>
       <br>
       <button type="submit" id="myBtn" name="button" class="button button1">Transcribe!</button>
     </form>
