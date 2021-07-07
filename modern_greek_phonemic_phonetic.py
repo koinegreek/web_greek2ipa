@@ -776,6 +776,7 @@ def greek_split(word):
 
 for word in greek_split(word):
 
+    word = myInput
     xyz = remove_acute(convert_stress(transcribed_phonetic(word)))
 
 def main(word):
