@@ -46,8 +46,10 @@ new_pattern2 = r"\1ˈ\2\3"
 pattern3 = f"(\s{greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
 new_pattern3 = r"ˈ\1\2\3"
 
-pattern33 = f"({greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
-new_pattern33 = r"ˈ\1\2\3"
+##when cluster has a weakened consonant##
+pattern33 = f"({left_parens})({greek_ipa_consonants})({right_parens})({greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
+new_pattern33 = r"\1\2\3ˈ\4\5\6"
+## end of special
 
 pattern4 = f"^({greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
 new_pattern4 = r"ˈ\1\2\3"
