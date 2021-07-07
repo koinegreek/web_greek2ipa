@@ -776,7 +776,7 @@ def greek_split(word):
 
 def iterate_phonetic(word):
     for item in ['λόγος', 'σάρξ', 'εγένετο']:
-        return(item)
+        return(remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(item)))))
 
 def main(word):
 
