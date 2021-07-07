@@ -774,15 +774,10 @@ def remove_acute(word):
 def greek_split(word):
     return word.split()
 
-for word in greek_split(word):
-
-    word = myInput
-    xyz = remove_acute(convert_stress(transcribed_phonetic(word)))
-
 def main(word):
 
     phonemic = transcribed_phonemic(transcribed_case_and_stress(word))
-    phonetic = xyz
+    phonetic = greek_split(word)
     ##remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(word))))
 
     return phonemic, phonetic
