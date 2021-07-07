@@ -680,9 +680,7 @@ greek_patterns_phonetic = [
 
 # PHONETIC: consonants above this line ----
 
-    [re.compile(f"(?<=[{greek_ipa_vowels}])u"), "w"],
-
-    [re.compile(f"(?<=[{greek_ipa_vowels}])u"), "w"],
+    [re.compile(f"(?<=[{greek_ipa_vowels}])u(?={greek_ipa_consonants})"), "w"],
 
     [re.compile(f"(?<=[{greek_ipa_vowels}])i"), "j"],
 
