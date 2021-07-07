@@ -264,8 +264,8 @@ greek_patterns_phonemic = [
     [re.compile("ηύ"), "íf"],
     [re.compile("ηυ"), "if"],
 
-    [re.compile(f"εύ(?={voiced_consonants_and_vowels})"), "év"],
-    [re.compile(f"ευ(?={voiced_consonants_and_vowels})"), "ev"],
+    [re.compile(f"εύ(?=[{voiced_consonants_and_vowels}])"), "év"],
+    [re.compile(f"ευ(?=[{voiced_consonants_and_vowels}])"), "ev"],
     [re.compile("εύ"), "éf"],
     [re.compile("ευ"), "ef"],
 
