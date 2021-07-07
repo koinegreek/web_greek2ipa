@@ -780,7 +780,6 @@ def iterate_phonetic(word):
 
 def main(word):
 
-
     phonemic = transcribed_phonemic(transcribed_case_and_stress(word))
     phonetic = iterate_phonetic(word)
     ##remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(word))))
