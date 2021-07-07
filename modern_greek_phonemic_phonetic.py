@@ -20,6 +20,7 @@ ou_vowel_unstressed = "ου"
 
 
 greek_ipa_vowels = "i|e|a|o|u|e̞|o̞|í|é|á|ó|ú|é̞|ó̞"
+greek_ipa_vowels_not_i = "e|a|o|u|e̞|o̞|é|á|ó|ú|é̞|ó̞"
 greek_ipa_vowels_stressed = "í|é|á|ó|ú|é̞|ó̞"
 greek_ipa_vowels_unstressed = "i|e|a|o|u|e̞|o̞"
 greek_ipa_front_vowels = "i|e|í|é"
@@ -360,7 +361,7 @@ greek_patterns_phonetic = [
 
     [re.compile(f"(?<=[{greek_ipa_vowels}])u(?={greek_ipa_consonants})"), "w"],
 
-    [re.compile(f"(?<=[{greek_ipa_vowels}])i"), "j"],
+    [re.compile(f"(?<=[{greek_ipa_vowels_not_i}])i"), "j"],
 
     [re.compile(f"^i(?={greek_ipa_vowels})"), "ʝ"],
     [re.compile(f" i(?={greek_ipa_vowels})"), " ʝ"],
