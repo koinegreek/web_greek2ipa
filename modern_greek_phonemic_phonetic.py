@@ -259,18 +259,18 @@ greek_patterns_phonemic = [
 
 # consonants above this line ----
 
-    [re.compile(f"ηύ(?={voiced_consonants_and_vowels})"), "ív"],
-    [re.compile(f"ηυ(?={voiced_consonants_and_vowels})"), "iv"],
+    [re.compile(f"ηύ(?=[{greek_ipa_voiced_consonants}|{greek_ipa_vowels}])"), "ív"],
+    [re.compile(f"ηυ(?=[{greek_ipa_voiced_consonants}|{greek_ipa_vowels}])"), "iv"],
     [re.compile("ηύ"), "íf"],
     [re.compile("ηυ"), "if"],
 
     [re.compile(f"εύ(?=[{greek_ipa_voiced_consonants}|{greek_ipa_vowels}])"), "év"],
-    [re.compile(f"ευ(?={voiced_consonants_and_vowels})"), "ev"],
+    [re.compile(f"ευ(?=[{greek_ipa_voiced_consonants}|{greek_ipa_vowels}])"), "ev"],
     [re.compile("εύ"), "éf"],
     [re.compile("ευ"), "ef"],
 
-    [re.compile(f"αύ(?={voiced_consonants_and_vowels})"), "áv"],
-    [re.compile(f"αυ(?={voiced_consonants_and_vowels})"), "av"],
+    [re.compile(f"αύ(?=[{greek_ipa_voiced_consonants}|{greek_ipa_vowels}])"), "áv"],
+    [re.compile(f"αυ(?=[{greek_ipa_voiced_consonants}|{greek_ipa_vowels}])"), "av"],
     [re.compile("αύ"), "áf"],
     [re.compile("αυ"), "af"],
 
