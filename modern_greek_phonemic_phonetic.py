@@ -25,7 +25,7 @@ greek_ipa_vowels_unstressed = "i|e|a|o|u|e̞|o̞"
 greek_ipa_front_vowels = "i|e|í|é"
 
 
-greek_ipa_consonants = "ɣ|g|v|ð|k|c|p|b|t|x|f|θ|m|n|l|r|s|s̠|z|z̠|ɟ|ʝ|ɲ|ŋ|ɱ|ç|ʎ"
+greek_ipa_consonants = "ɣ|g|v|ð|d|k|c|p|b|t|x|f|θ|m|n|l|r|s|s̠|z|z̠|ɟ|ʝ|ɲ|ŋ|ɱ|ç|ʎ"
 greek_ipa_voiced_consonants = "ɣ|v|b|ð|d|m|n|l|r|z"
 greek_ipa_unvoiced_consonants = "k|p|t|x|f|θ|s"
 
@@ -36,6 +36,8 @@ greek_ipa_velar_fricative_consonants = "ɣ|x"
 greek_ipa_palatal_fricative_consonants = "ç|j|ʝ"
 greek_ipa_palatal_stop_consonants = "c|ɟ"
 
+left_parens = "\\("
+right_parens = "\\)"
 
 pattern1 = f"({greek_ipa_vowels_unstressed})({greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
 new_pattern1 = r"\1\2ˈ\3\4"
