@@ -777,7 +777,7 @@ def greek_split(word):
 def greek_split2(word):
     xyz = greek_split(word)
     for word in xyz:
-        return remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(word))))
+        return remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(xyz))))
 
 def main(word):
 
