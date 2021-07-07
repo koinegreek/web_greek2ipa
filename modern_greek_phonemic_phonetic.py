@@ -146,7 +146,7 @@ greek_patterns_case_and_stress = [
     [re.compile(f"{iota_unaccented_unicode}"), "ι"],
     [re.compile(f"{iota_trema_unicode}"), "ϊ"],
 
-    [re.compile(f"[{eta_accented_unicode}]"), "ή"],
+    [re.compile(f"{eta_accented_unicode}"), "ή"],
     [re.compile(f"{eta_unaccented_unicode}"), "η"],
 
     [re.compile(f"{upsilon_accented_unicode}"), "ύ"],
