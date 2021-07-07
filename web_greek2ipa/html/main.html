@@ -15,11 +15,11 @@
       <br>
     <form class="" action="" method="post">
       {% csrf_token %}
-      <textarea style="width: 100%; max-width: 100%" name="input" id="myInput" rows="4" cols="80" placeholder="Type Greek text here ... ">{{request.POST.input}}</textarea>
+      <textarea style="width: 90%; max-width: 90%" name="input" id="myInput" rows="4" cols="80" placeholder="Type Greek text here ... ">{{request.POST.input}}</textarea>
       <br>
-      <textarea rows="4" cols="80" placeholder="/phonemic/ transcription will appear here ... ">{{phonemic}}</textarea>
+      <textarea style="width: 90%; max-width: 90%" rows="4" cols="80" placeholder="/phonemic/ transcription will appear here ... ">{{phonemic}}</textarea>
       <br>
-      <textarea rows="4" cols="80" placeholder="[phonetic] transcription will appear here ... ">{{phonetic}}</textarea>
+      <textarea style="width: 90%; max-width: 90%" rows="4" cols="80" placeholder="[phonetic] transcription will appear here ... ">{{phonetic}}</textarea>
       <br>
       <button type="submit" id="myBtn" name="button">Transcribe</button>
     </form>
