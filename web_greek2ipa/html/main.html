@@ -10,18 +10,19 @@
 <img src="https://raw.githubusercontent.com/koinegreek/web_greek2ipa/main/web_greek2ipa/images/greek2ipa_logo_large.PNG"
      alt="logo"
      width="544"
-     height="212">
+     height="212"
+     style="max-width:100%;">
 
       <br>
     <form class="" action="" method="post">
       {% csrf_token %}
-      <textarea style="width: 90%; max-width: 90%" name="input" id="myInput" rows="4" cols="80" placeholder="Type Greek text here ... ">{{request.POST.input}}</textarea>
+      <textarea style="max-width: 90%" name="input" id="myInput" rows="4" cols="80" placeholder="Type Greek text here ... ">{{request.POST.input}}</textarea>
       <br>
-      <textarea style="width: 90%; max-width: 90%" rows="4" cols="80" placeholder="/phonemic/ transcription will appear here ... ">{{phonemic}}</textarea>
+      <textarea style="max-width: 90%" rows="4" cols="80" placeholder="/phonemic/ transcription will appear here ... ">{{phonemic}}</textarea>
       <br>
-      <textarea style="width: 90%; max-width: 90%" rows="4" cols="80" placeholder="[phonetic] transcription will appear here ... ">{{phonetic}}</textarea>
+      <textarea style="max-width: 90%" rows="4" cols="80" placeholder="[phonetic] transcription will appear here ... ">{{phonetic}}</textarea>
       <br>
-      <button type="submit" id="myBtn" name="button">Transcribe</button>
+      <button style="min-width: 50%" type="submit" id="myBtn" name="button">Transcribe</button>
     </form>
 
     <script>
