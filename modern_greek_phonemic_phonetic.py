@@ -142,27 +142,27 @@ greek_patterns_case_and_stress = [
 
 #regularise_accents_to_modern_stress_START#
 
-    [re.compile("{iota_accented_unicode}"), "ί"],
-    [re.compile("{iota_unaccented_unicode}"), "ι"],
-    [re.compile("{iota_trema_unicode}"), "ϊ"],
+    [re.compile(f"{iota_accented_unicode}"), "ί"],
+    [re.compile(f"{iota_unaccented_unicode}"), "ι"],
+    [re.compile(f"{iota_trema_unicode}"), "ϊ"],
 
-    [re.compile("{eta_accented_unicode}"), "ή"],
-    [re.compile("{eta_unaccented_unicode}"), "η"],
+    [re.compile(f"{eta_accented_unicode}"), "ή"],
+    [re.compile(f"{eta_unaccented_unicode}"), "η"],
 
-    [re.compile("{upsilon_accented_unicode}"), "ύ"],
-    [re.compile("{upsilon_unaccented_unicode}"), "υ"],
+    [re.compile(f"{upsilon_accented_unicode}"), "ύ"],
+    [re.compile(f"{upsilon_unaccented_unicode}"), "υ"],
 
-    [re.compile("{epsilon_accented_unicode}"), "έ"],
-    [re.compile("{epsilon_unaccented_unicode}"), "ε"],
+    [re.compile(f"{epsilon_accented_unicode}"), "έ"],
+    [re.compile(f"{epsilon_unaccented_unicode}"), "ε"],
 
-    [re.compile("{alpha_accented_unicode}"), "ά"],
-    [re.compile("{alpha_unaccented_unicode}"), "α"],
+    [re.compile(f"{alpha_accented_unicode}"), "ά"],
+    [re.compile(f"{alpha_unaccented_unicode}"), "α"],
 
-    [re.compile("{omicron_accented_unicode}"), "ό"],
-    [re.compile("{omicron_unaccented_unicode}"), "ο"],
+    [re.compile(f"{omicron_accented_unicode}"), "ό"],
+    [re.compile(f"{omicron_unaccented_unicode}"), "ο"],
 
-    [re.compile("{omega_accented_unicode}"), "ώ"],
-    [re.compile("{omega_unaccented_unicode}"), "ω"],
+    [re.compile(f"{omega_accented_unicode}"), "ώ"],
+    [re.compile(f"{omega_unaccented_unicode}"), "ω"],
 
 ###regularise_accents_to_modern_stress_END###
 
