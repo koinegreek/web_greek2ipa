@@ -169,9 +169,7 @@ greek_patterns_case_and_stress = [
 
 ]
 
-greek_patterns_phonemic = [
-
-
+greek_patterns_pre_phonemic_phonemic = [
 
     [re.compile("γγ"), "nk"],
     [re.compile("γξ"), "nks"],
@@ -192,6 +190,31 @@ greek_patterns_phonemic = [
 
     [re.compile(f"(?<=[{vowels}])γκ"), "nk"],
     [re.compile("γκ"), "g"],
+
+]
+
+greek_patterns_pre_phonemic_phonetic = [
+
+        [re.compile("γγ"), "nk"],
+        [re.compile("γξ"), "nks"],
+        [re.compile("γχ"), "nx"],
+        [re.compile("γι"), "i"],
+
+        [re.compile(f"(?<=^συ)μπ"), "np"],
+        [re.compile(f"(?<=^ε)μπ"), "np"],
+        [re.compile(f"(?<=[{vowels}])μπ"), "mp"],
+        [re.compile("μπ"), "b"],
+
+        [re.compile(f"(?<=[{vowels}])ντ"), "nt"],
+        [re.compile("ντ"), "d"],
+
+        [re.compile(f"(?<=[{vowels}])γκ"), "nk"],
+        [re.compile("γκ"), "g"],
+
+]
+
+greek_patterns_phonemic = [
+
 
     [re.compile("β(?=['β'])"), ""],
     [re.compile("δ(?=['δ'])"), ""],
@@ -241,10 +264,10 @@ greek_patterns_phonemic = [
     [re.compile("ηύ"), "íf"],
     [re.compile("ηυ"), "if"],
 
-    [re.compile(f"εύ(?={voiced_consonants_and_vowels})"), "é̞v"],
-    [re.compile(f"ευ(?={voiced_consonants_and_vowels})"), "e̞v"],
-    [re.compile("εύ"), "é̞f"],
-    [re.compile("ευ"), "e̞f"],
+    [re.compile(f"εύ(?={voiced_consonants_and_vowels})"), "év"],
+    [re.compile(f"ευ(?={voiced_consonants_and_vowels})"), "ev"],
+    [re.compile("εύ"), "éf"],
+    [re.compile("ευ"), "ef"],
 
     [re.compile(f"αύ(?={voiced_consonants_and_vowels}])"), "áv"],
     [re.compile(f"αυ(?={voiced_consonants_and_vowels})"), "av"],
@@ -297,138 +320,9 @@ greek_patterns_phonemic = [
 # vowels above this line ----
 
 
-
-
-
 ]
 
 greek_patterns_phonetic = [
-
-
-    [re.compile("γγ"), "nk"],
-    [re.compile("γξ"), "nks"],
-    [re.compile("γχ"), "nx"],
-    [re.compile("γι"), "i"],
-
-    [re.compile(f"(?<=^συ)μπ"), "np"],
-    [re.compile(f"(?<=^ε)μπ"), "np"],
-    [re.compile(f"(?<=[{vowels}])μπ"), "mp"],
-    [re.compile("μπ"), "b"],
-
-    [re.compile(f"(?<=[{vowels}])ντ"), "nt"],
-    [re.compile("ντ"), "d"],
-
-    [re.compile(f"(?<=[{vowels}])γκ"), "nk"],
-    [re.compile("γκ"), "g"],
-
-    [re.compile("β(?=['β'])"), ""],
-    [re.compile("δ(?=['δ'])"), ""],
-    [re.compile("χ(?=['χ'])"), ""],
-    [re.compile("φ(?=['φ'])"), ""],
-    [re.compile("θ(?=['θ'])"), ""],
-    [re.compile("κ(?=['κ'])"), ""],
-    [re.compile("π(?=['π'])"), ""],
-    [re.compile("τ(?=['τ'])"), ""],
-    [re.compile("μ(?=['μ'])"), ""],
-    [re.compile("ν(?=['ν'])"), ""],
-    [re.compile("λ(?=['λ'])"), ""],
-    [re.compile("ρ(?=['ρ'])"), ""],
-    [re.compile("σ(?=['σ'])"), ""],
-    [re.compile("ζ(?=['ζ'])"), ""],
-
-    [re.compile("γ"), "ɣ"],
-    [re.compile("β"), "v"],
-    [re.compile("δ"), "ð"],
-
-    [re.compile("χ"), "x"],
-    [re.compile("φ"), "f"],
-    [re.compile("θ"), "θ"],
-
-    [re.compile("κ"), "k"],
-    [re.compile("π"), "p"],
-    [re.compile("τ"), "t"],
-
-    [re.compile("μ"), "m"],
-    [re.compile("ν"), "n"],
-
-    [re.compile("λ"), "l"],
-    [re.compile("ρ"), "r"],
-
-    [re.compile("σ"), "s"],
-    [re.compile("ς"), "s"],
-    [re.compile("ζ"), "z"],
-
-    [re.compile("ξ"), "ks"],
-    [re.compile("ψ"), "ps"],
-
-
-# PHONEMIC: consonants above this line ----
-
-    [re.compile(f"ηύ(?={voiced_consonants_and_vowels})"), "ív"],
-    [re.compile(f"ηυ(?={voiced_consonants_and_vowels})"), "iv"],
-    [re.compile("ηύ"), "íf"],
-    [re.compile("ηυ"), "if"],
-
-    [re.compile(f"εύ(?={voiced_consonants_and_vowels})"), "év"],
-    [re.compile(f"ευ(?={voiced_consonants_and_vowels})"), "ev"],
-    [re.compile("εύ"), "éf"],
-    [re.compile("ευ"), "ef"],
-
-    [re.compile(f"αύ(?={voiced_consonants_and_vowels}])"), "áv"],
-    [re.compile(f"αυ(?={voiced_consonants_and_vowels})"), "av"],
-    [re.compile("αύ"), "áf"],
-    [re.compile("αυ"), "af"],
-
-
-# PHONEMIC: diphthongs above this line ----
-
-    [re.compile("εί"), "í"],
-    [re.compile("ει"), "i"],
-
-    [re.compile("υί"), "í"],
-    [re.compile("υι"), "i"],
-
-    [re.compile("οί"), "í"],
-    [re.compile("οι"), "i"],
-
-    [re.compile("αί"), "é"],
-    [re.compile("αι"), "e"],
-
-    [re.compile("ού"), "ú"],
-    [re.compile("ου"), "u"],
-
-    [re.compile("ΐ"), "í"],
-    [re.compile("ϊ"), "i"],
-
-    [re.compile("ί"), "í"],
-    [re.compile("ι"), "i"],
-
-    [re.compile("ή"), "í"],
-    [re.compile("η"), "i"],
-
-    [re.compile("ύ"), "í"],
-    [re.compile("υ"), "i"],
-
-    [re.compile("έ"), "é"],
-    [re.compile("ε"), "e"],
-
-    [re.compile("ά"), "á"],
-    [re.compile("α"), "a"],
-
-    [re.compile("ό"), "ó"],
-    [re.compile("ο"), "o"],
-
-    [re.compile("ώ"), "ó"],
-    [re.compile("ω"), "o"],
-
-
-# PHONEMIC: vowels above this line ----
-
-
-
-
-
-###############
 
 
     [re.compile(f"s(?={greek_ipa_voiced_consonants})"), "z"],
@@ -504,12 +398,23 @@ def transcribed_case_and_stress(word):
         word = pattern.sub(replace, word)
     return word
 
+def pp_phonemic(word):
+    """Transcribe a Greek word"""
+    for pattern, replace in greek_patterns_pre_phonemic_phonemic:
+        word = pattern.sub(replace, word)
+    return word
+
+def pp_phonetic(word):
+    """Transcribe a Greek word"""
+    for pattern, replace in greek_patterns_pre_phonemic_phonetic:
+        word = pattern.sub(replace, word)
+    return word
+
 def transcribed_phonemic(word):
     """Transcribe a Greek word"""
     for pattern, replace in greek_patterns_phonemic:
         word = pattern.sub(replace, word)
     return word
-
 
 def transcribed_phonetic(word):
     """Transcribe a Greek word"""
@@ -561,7 +466,7 @@ def greek_split(word):
 def iterate_phonemic(word):
 
     a_list = greek_split(word)
-    new_list = [transcribed_phonemic(transcribed_case_and_stress(element)) for element in a_list]
+    new_list = [transcribed_phonemic(pp_phonemic(transcribed_case_and_stress(element))) for element in a_list]
     back_to_string = (" ".join(new_list))
 
     return(back_to_string)
@@ -569,7 +474,7 @@ def iterate_phonemic(word):
 def iterate_phonetic(word):
 
     a_list = greek_split(word)
-    new_list = [remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(element)))) for element in a_list]
+    new_list = [remove_acute(convert_stress(transcribed_phonetic(transcribed_phonemic(pp_phonetic(transcribed_case_and_stress(element)))))) for element in a_list]
     back_to_string = (" ".join(new_list))
 
     return(back_to_string)
