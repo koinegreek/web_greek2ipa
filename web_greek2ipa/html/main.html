@@ -32,7 +32,7 @@
       <br>
     <form class="" action="" method="post">
       {% csrf_token %}
-      <textarea style="max-width: 90%" name="input" id="myInput" rows="4" cols="80" placeholder="Type Greek text here ... ">{{request.POST.input}}</textarea>
+      <textarea style="max-width: 90%; font-size: 3.0vh" name="input" id="myInput" rows="4" cols="80" placeholder="Type Greek text here ... ">{{request.POST.input}}</textarea>
       <br>
       <textarea style="max-width: 90%" rows="4" cols="80" placeholder="/phonemic/ transcription will appear here ... ">{{phonemic}}</textarea>
       <br>
