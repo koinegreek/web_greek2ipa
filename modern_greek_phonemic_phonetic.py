@@ -39,6 +39,17 @@ greek_ipa_palatal_stop_consonants = "c|ɟ"
 left_parens = "\\("
 right_parens = "\\)"
 
+##for orthography variants unicode##
+iota_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ"
+eta_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ"
+upsilon_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ"
+epsilon_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ"
+alpha_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ"
+omicron_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ"
+omicron_unaccented_unicode = "ὁ|ὀ"
+
+
+
 pattern1 = f"({greek_ipa_vowels_unstressed})({greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
 new_pattern1 = r"\1\2ˈ\3\4"
 
@@ -374,14 +385,8 @@ greek_patterns_case_and_stress = [
     [re.compile("ἀ"), "α"],
     [re.compile("ἁ"), "α"],
 
-    [re.compile("ὄ"), "ό"],
-    [re.compile("ὅ"), "ό"],
-    [re.compile("ὂ"), "ό"],
-    [re.compile("ὃ"), "ό"],
-    [re.compile("ὸ"), "ό"],
-
-    [re.compile("ὀ"), "ο"],
-    [re.compile("ὁ"), "ο"],
+    [re.compile("{omicron_accented_unicode}"), "ό"],
+    [re.compile("{omicron_unaccented_unicode}"), "ο"],
 
     [re.compile("ὤ"), "ώ"],
     [re.compile("ὥ"), "ώ"],
