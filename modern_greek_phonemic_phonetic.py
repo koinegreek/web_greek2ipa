@@ -26,8 +26,8 @@ greek_ipa_front_vowels = "i|e|í|é"
 
 
 greek_ipa_consonants = "ɣ|g|v|ð|d|k|c|p|b|t|x|f|θ|m|n|l|r|s|s̠|z|z̠|ɟ|ʝ|ɲ|ŋ|ɱ|ç|ʎ"
-greek_ipa_voiced_consonants = "ɣ|v|b|ð|d|m|n|l|r|z"
-greek_ipa_unvoiced_consonants = "k|p|t|x|f|θ|s"
+greek_ipa_voiced_consonants = "ɣ|g|v|ð|d|b|m|n|l|r|z|z̠|ɟ|ʝ|ɲ|ŋ|ɱ|ʎ"
+greek_ipa_unvoiced_consonants = "k|c|p|b|t|x|f|θ|s|s̠|ç|ʎ"
 
 greek_ipa_stop_consonants = "g|k|b|p|d|t"
 greek_ipa_velar_consonants = "g|ɣ|k|x"
