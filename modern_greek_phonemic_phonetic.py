@@ -46,6 +46,9 @@ new_pattern2 = r"\1ˈ\2\3"
 pattern3 = f"(\s{greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
 new_pattern3 = r"ˈ\1\2\3"
 
+pattern33 = f"(\s{greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
+new_pattern33 = r"ˈ\1\2\3"
+
 pattern4 = f"^({greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
 new_pattern4 = r"ˈ\1\2\3"
 
@@ -752,6 +755,8 @@ def convert_stress(word):
         return re.sub(pattern2, new_pattern2, word)
     elif re.search(pattern3, word):
         return re.sub(pattern3, new_pattern3, word)
+    elif re.search(pattern33, word):
+        return re.sub(pattern33, new_pattern33, word)
     elif re.search(pattern4, word):
         return re.sub(pattern4, new_pattern4, word)
     elif re.search(pattern5, word):
