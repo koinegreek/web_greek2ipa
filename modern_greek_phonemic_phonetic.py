@@ -778,11 +778,6 @@ def main(word):
 
     phonemic = transcribed_phonemic(transcribed_case_and_stress(word))
     phonetic1 = greek_split(word)
-
-    for x in phonetic1:
-        return remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(x))))
     ##remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(word))))
 
-    phonetic = x
-    
     return phonemic, phonetic
