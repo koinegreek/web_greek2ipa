@@ -83,6 +83,18 @@ new_pattern15 = "u"
 
 greek_patterns_case_and_stress = [
 
+## oxia vs. tonos greek font replacement START ##
+
+    [re.compile("ί"), "ί"],
+    [re.compile("ή"), "ή"],
+    [re.compile("έ"), "έ"],
+    [re.compile("ά"), "ά"],
+    [re.compile("ό"), "ό"],
+    [re.compile("ώ"), "ώ"],
+    [re.compile("ύ"), "ύ"],
+
+## oxia vs. tonos greek font replacement END ##
+
 ##making_everything_lowercase_START###
 
     [re.compile("Β"), "β"],
