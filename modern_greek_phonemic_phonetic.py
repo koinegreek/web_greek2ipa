@@ -46,7 +46,7 @@ new_pattern2 = r"\1ˈ\2\3"
 pattern3 = f"(\s{greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
 new_pattern3 = r"ˈ\1\2\3"
 
-pattern33 = f"(\s{greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
+pattern33 = f"({greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
 new_pattern33 = r"ˈ\1\2\3"
 
 pattern4 = f"^({greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
