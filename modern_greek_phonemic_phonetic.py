@@ -39,15 +39,31 @@ greek_ipa_palatal_stop_consonants = "c|ɟ"
 left_parens = "\\("
 right_parens = "\\)"
 
-##for orthography variants unicode##
-iota_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ"
-eta_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ"
-upsilon_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ"
-epsilon_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ"
-alpha_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ"
-omicron_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ"
-omicron_unaccented_unicode = "ὁ|ὀ"
+##for orthography variants unicode_START (last in every list is the oxia to accent regularisation)##
 
+iota_accented_unicode = "ἴ|ἵ|ἲ|ἳ|ἶ|ἷ|ῖ|ὶ|Ί|Ἴ|Ἵ|Ἲ|Ἳ|Ἶ|Ἷ|Ὶ|ί"
+iota_unaccented_unicode = "ἰ|ἱ|Ἰ|Ἱ|Ι"
+iota_trema_unicode = "Ϊ"
+
+eta_accented_unicode = "ἤ|ἥ|ἢ|ἣ|ἦ|ἧ|ῆ|ὴ|ῇ|ῄ|Ἤ|Ἥ|Ἢ|Ἣ|Ἦ|Ἧ|῀Η|Ὴ|῀ιΗ|´ͅΗ|ή"
+eta_unaccented_unicode = "ῃ|ἡ|ἠ|Η|Ἡ|Ἠ|ῌ"
+
+upsilon_accented_unicode = "ὔ|ὕ|ὒ|ὓ|ὗ|ῦ|ὺ|Υ|῎Υ|Ὕ|῍Υ|Ὓ|῏Υ|Ὗ|῀Υ|Ὺ|ύ"
+upsilon_unaccented_unicode = "ὐ|ὑ|Υ|Ὑ|᾽Υ"
+
+epsilon_accented_unicode = "ἔ|ἕ|ἒ|ἓ|ὲ|Ε|Ἔ|Ἕ|Ἒ|Ἓ|Ὲ|έ"
+epsilon_unaccented_unicode = "ἐ|ἑ|Ἐ|Ἑ|Ε"
+
+alpha_accented_unicode = "ἄ|ἅ|ἂ|ἃ|ἆ|ἇ|ᾶ|ὰ|ᾷ|ᾴ|Ἄ|Ἅ|Ἂ|Ἃ|Ἆ|Ἇ|῀Α|Ὰ|῀ιΑ|´ͅΑ|ά"
+alpha_unaccented_unicode = "ᾳ|ἀ|ἁ|Α|Ἀ|Ἁ|ᾼ"
+
+omicron_accented_unicode = "ὄ|ὅ|ὂ|ὃ|ὸ|Ὄ|Ὅ|Ὂ|Ὃ|Ὸ|ό"
+omicron_unaccented_unicode = "ὁ|ὀ|Ο|Ὀ|Ὁ"
+
+omega_accented_unicode = "ὤ|ὥ|ὢ|ὣ|ὦ|ὧ|ῶ|ὼ|ῷ|ῴ|Ὤ|Ὥ|Ὤ|Ὣ|Ὦ|Ὧ|῀Ω|Ὼ|῀ιΩ|´ͅΩ|ώ"
+omega_unaccented_unicode = "ῳ|ὠ|ὡ|Ω|Ὠ|Ὡ|ῼ"
+
+##for orthography variants unicode_END##
 
 
 pattern1 = f"({greek_ipa_vowels_unstressed})({greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
@@ -82,8 +98,6 @@ new_pattern8 = r"\1ˈ\2"
 pattern9 = f"({greek_ipa_vowels_unstressed})"
 new_pattern9 = r"\1"
 
-
-
 pattern11 = "í"
 new_pattern11 = "i"
 
@@ -101,17 +115,7 @@ new_pattern15 = "u"
 
 greek_patterns_case_and_stress = [
 
-## oxia vs. tonos greek font replacement START ##
 
-    [re.compile("ί"), "ί"],
-    [re.compile("ή"), "ή"],
-    [re.compile("έ"), "έ"],
-    [re.compile("ά"), "ά"],
-    [re.compile("ό"), "ό"],
-    [re.compile("ώ"), "ώ"],
-    [re.compile("ύ"), "ύ"],
-
-## oxia vs. tonos greek font replacement END ##
 
 ##making_everything_lowercase_START###
 
@@ -133,276 +137,32 @@ greek_patterns_case_and_stress = [
     [re.compile("Χ"), "χ"],
     [re.compile("Ψ"), "ψ"],
 
-    [re.compile("Ϊ"), "ϊ"],
-    [re.compile("Ι"), "ι"],
-    [re.compile("Ί"), "ί"],
-    [re.compile("Ἴ"), "ί"],
-    [re.compile("Ἵ"), "ί"],
-    [re.compile("Ἲ"), "ί"],
-    [re.compile("Ἳ"), "ί"],
-    [re.compile("Ἶ"), "ί"],
-    [re.compile("Ἷ"), "ί"],
-    [re.compile("Ὶ"), "ί"],
-    [re.compile("Ἰ"), "ί"],
-    [re.compile("Ἱ"), "ί"],
-
-    [re.compile("Υ"), "υ"],
-    [re.compile("῎Υ"), "ύ"],
-    [re.compile("Ὕ"), "ύ"],
-    [re.compile("῍Υ"), "ύ"],
-    [re.compile("Ὓ"), "ύ"],
-    [re.compile("῏Υ"), "ύ"],
-    [re.compile("Ὗ"), "ύ"],
-    [re.compile("῀Υ"), "ύ"],
-    [re.compile("Ὺ"), "ύ"],
-
-    [re.compile("᾽Υ"), "υ"],
-    [re.compile("Ὑ"), "υ"],
-
-    [re.compile("Η"), "η"],
-    [re.compile("Ἤ"), "ή"],
-    [re.compile("Ἥ"), "ή"],
-    [re.compile("Ἢ"), "ή"],
-    [re.compile("Ἣ"), "ή"],
-    [re.compile("Ἦ"), "ή"],
-    [re.compile("Ἧ"), "ή"],
-    [re.compile("῀Η"), "ή"],
-    [re.compile("Ὴ"), "ή"],
-
-    [re.compile("῀ιΗ"), "ή"],
-    [re.compile("´ͅΗ"), "ή"],
-    [re.compile("ῌ"), "η"],
-
-    [re.compile("Ἡ"), "η"],
-    [re.compile("Ἠ"), "η"],
-
-    [re.compile("Ε"), "ε"],
-    [re.compile("Ἔ"), "έ"],
-    [re.compile("Ἕ"), "έ"],
-    [re.compile("Ἒ"), "έ"],
-    [re.compile("Ἓ"), "έ"],
-    [re.compile("Ὲ"), "έ"],
-
-    [re.compile("Ἐ"), "ε"],
-    [re.compile("Ἑ"), "ε"],
-
-
-    [re.compile("Α"), "α"],
-    [re.compile("Ἄ"), "ά"],
-    [re.compile("Ἅ"), "ά"],
-    [re.compile("Ἂ"), "ά"],
-    [re.compile("Ἃ"), "ά"],
-    [re.compile("Ἆ"), "ά"],
-    [re.compile("Ἇ"), "ά"],
-    [re.compile("῀Α"), "ά"],
-    [re.compile("Ὰ"), "ά"],
-
-    [re.compile("῀ιΑ"), "ά"],
-    [re.compile("´ͅΑ"), "ά"],
-    [re.compile("ᾼ"), "α"],
-
-    [re.compile("Ἀ"), "α"],
-    [re.compile("Ἁ"), "α"],
-
-    [re.compile("Ο"), "ο"],
-    [re.compile("Ὄ"), "ό"],
-    [re.compile("Ὅ"), "ό"],
-    [re.compile("Ὂ"), "ό"],
-    [re.compile("Ὃ"), "ό"],
-    [re.compile("Ὸ"), "ό"],
-
-    [re.compile("Ὀ"), "ο"],
-    [re.compile("Ὁ"), "ο"],
-
-    [re.compile("Ω"), "ω"],
-    [re.compile("Ὤ"), "ώ"],
-    [re.compile("Ὥ"), "ώ"],
-    [re.compile("Ὤ"), "ώ"],
-    [re.compile("Ὣ"), "ώ"],
-    [re.compile("Ὦ"), "ώ"],
-    [re.compile("Ὧ"), "ώ"],
-    [re.compile("῀Ω"), "ώ"],
-    [re.compile("Ὼ"), "ώ"],
-
-    [re.compile("῀ιΩ"), "ώ"],
-    [re.compile("´ͅΩ"), "ώ"],
-    [re.compile("ῼ"), "ω"],
-
-    [re.compile("Ὠ"), "ω"],
-    [re.compile("Ὡ"), "ω"],
-
 
 #making_everything_lowercase_END
 
 #regularise_accents_to_modern_stress_START#
 
-    [re.compile("οἴ"), "οί"],
-    [re.compile("οἵ"), "οί"],
-    [re.compile("οἲ"), "οί"],
-    [re.compile("οἳ"), "οί"],
-    [re.compile("οἶ"), "οί"],
-    [re.compile("οἷ"), "οί"],
-    [re.compile("οῖ"), "οί"],
-    [re.compile("οὶ"), "οί"],
+    [re.compile("{iota_accented_unicode}"), "ί"],
+    [re.compile("{iota_unaccented_unicode}"), "ι"],
+    [re.compile("{iota_trema_unicode}"), "ϊ"],
 
-    [re.compile("οἱ"), "οι"],
-    [re.compile("οἰ"), "οι"],
+    [re.compile("{eta_accented_unicode}"), "ή"],
+    [re.compile("{eta_unaccented_unicode}"), "η"],
 
-    [re.compile("εἴ"), "εί"],
-    [re.compile("εἵ"), "εί"],
-    [re.compile("εἲ"), "εί"],
-    [re.compile("εἳ"), "εί"],
-    [re.compile("εἶ"), "εί"],
-    [re.compile("εἷ"), "εί"],
-    [re.compile("εῖ"), "εί"],
-    [re.compile("εὶ"), "εί"],
+    [re.compile("{upsilon_accented_unicode}"), "ύ"],
+    [re.compile("{upsilon_unaccented_unicode}"), "υ"],
 
-    [re.compile("εἱ"), "ει"],
-    [re.compile("εἰ"), "ει"],
+    [re.compile("{epsilon_accented_unicode}"), "έ"],
+    [re.compile("{epsilon_unaccented_unicode}"), "ε"],
 
-    [re.compile("αἴ"), "αί"],
-    [re.compile("αἵ"), "αί"],
-    [re.compile("αἲ"), "αί"],
-    [re.compile("αἳ"), "αί"],
-    [re.compile("αἶ"), "αί"],
-    [re.compile("αἷ"), "αί"],
-    [re.compile("αῖ"), "αί"],
-    [re.compile("αὶ"), "αί"],
-
-    [re.compile("αἱ"), "αι"],
-    [re.compile("αἰ"), "αι"],
-
-    [re.compile("υἴ"), "υί"],
-    [re.compile("υἵ"), "υί"],
-    [re.compile("υἲ"), "υί"],
-    [re.compile("υἳ"), "υί"],
-    [re.compile("υἶ"), "υί"],
-    [re.compile("υἷ"), "υί"],
-    [re.compile("υῖ"), "υί"],
-    [re.compile("υὶ"), "υί"],
-
-    [re.compile("υἱ"), "υι"],
-    [re.compile("υἰ"), "υι"],
-
-    [re.compile("οὔ"), "ού"],
-    [re.compile("οὕ"), "ού"],
-    [re.compile("οὒ"), "ού"],
-    [re.compile("οὓ"), "ού"],
-    [re.compile("οὖ"), "ού"],
-    [re.compile("οὗ"), "ού"],
-    [re.compile("οῦ"), "ού"],
-    [re.compile("οὺ"), "ού"],
-
-    [re.compile("οὑ"), "ου"],
-    [re.compile("οὐ"), "ου"],
-
-    [re.compile("αὔ"), "αύ"],
-    [re.compile("αὕ"), "αύ"],
-    [re.compile("αὒ"), "αύ"],
-    [re.compile("αὓ"), "αύ"],
-    [re.compile("αὖ"), "αύ"],
-    [re.compile("αὗ"), "αύ"],
-    [re.compile("αῦ"), "αύ"],
-    [re.compile("αὺ"), "αύ"],
-
-    [re.compile("αὑ"), "αυ"],
-    [re.compile("αὐ"), "αυ"],
-
-    [re.compile("εὔ"), "εύ"],
-    [re.compile("εὕ"), "εύ"],
-    [re.compile("εὒ"), "εύ"],
-    [re.compile("εὓ"), "εύ"],
-    [re.compile("εὖ"), "εύ"],
-    [re.compile("εὗ"), "εύ"],
-    [re.compile("εῦ"), "εύ"],
-    [re.compile("εὺ"), "εύ"],
-
-    [re.compile("εὑ"), "ευ"],
-    [re.compile("εὐ"), "ευ"],
-
-    [re.compile("ἴ"), "ί"],
-    [re.compile("ἵ"), "ί"],
-    [re.compile("ἲ"), "ί"],
-    [re.compile("ἳ"), "ί"],
-    [re.compile("ἶ"), "ί"],
-    [re.compile("ἷ"), "ί"],
-    [re.compile("ῖ"), "ί"],
-    [re.compile("ὶ"), "ί"],
-
-    [re.compile("ἰ"), "ι"],
-    [re.compile("ἱ"), "ι"],
-
-    [re.compile("ὔ"), "ύ"],
-    [re.compile("ὕ"), "ύ"],
-    [re.compile("ὒ"), "ύ"],
-    [re.compile("ὓ"), "ύ"],
-    [re.compile("ὖ"), "ύ"],
-    [re.compile("ὗ"), "ύ"],
-    [re.compile("ῦ"), "ύ"],
-    [re.compile("ὺ"), "ύ"],
-
-    [re.compile("ὐ"), "υ"],
-    [re.compile("ὑ"), "υ"],
-
-    [re.compile("ἤ"), "ή"],
-    [re.compile("ἥ"), "ή"],
-    [re.compile("ἢ"), "ή"],
-    [re.compile("ἣ"), "ή"],
-    [re.compile("ἦ"), "ή"],
-    [re.compile("ἧ"), "ή"],
-    [re.compile("ῆ"), "ή"],
-    [re.compile("ὴ"), "ή"],
-
-    [re.compile("ῇ"), "ή"],
-    [re.compile("ῄ"), "ή"],
-    [re.compile("ῃ"), "η"],
-
-    [re.compile("ἡ"), "η"],
-    [re.compile("ἠ"), "η"],
-
-    [re.compile("ἔ"), "έ"],
-    [re.compile("ἕ"), "έ"],
-    [re.compile("ἒ"), "έ"],
-    [re.compile("ἓ"), "έ"],
-    [re.compile("ὲ"), "έ"],
-
-    [re.compile("ἐ"), "ε"],
-    [re.compile("ἑ"), "ε"],
-
-    [re.compile("ἄ"), "ά"],
-    [re.compile("ἅ"), "ά"],
-    [re.compile("ἂ"), "ά"],
-    [re.compile("ἃ"), "ά"],
-    [re.compile("ἆ"), "ά"],
-    [re.compile("ἇ"), "ά"],
-    [re.compile("ᾶ"), "ά"],
-    [re.compile("ὰ"), "ά"],
-
-    [re.compile("ᾷ"), "ά"],
-    [re.compile("ᾴ"), "ά"],
-    [re.compile("ᾳ"), "α"],
-
-    [re.compile("ἀ"), "α"],
-    [re.compile("ἁ"), "α"],
+    [re.compile("{alpha_accented_unicode}"), "ά"],
+    [re.compile("{alpha_unaccented_unicode}"), "α"],
 
     [re.compile("{omicron_accented_unicode}"), "ό"],
     [re.compile("{omicron_unaccented_unicode}"), "ο"],
 
-    [re.compile("ὤ"), "ώ"],
-    [re.compile("ὥ"), "ώ"],
-    [re.compile("ὢ"), "ώ"],
-    [re.compile("ὣ"), "ώ"],
-    [re.compile("ὦ"), "ώ"],
-    [re.compile("ὧ"), "ώ"],
-    [re.compile("ῶ"), "ώ"],
-    [re.compile("ὼ"), "ώ"],
-
-    [re.compile("ῷ"), "ώ"],
-    [re.compile("ῴ"), "ώ"],
-    [re.compile("ῳ"), "ω"],
-
-    [re.compile("ὠ"), "ω"],
-    [re.compile("ὡ"), "ω"],
+    [re.compile("{omega_accented_unicode}"), "ώ"],
+    [re.compile("{omega_unaccented_unicode}"), "ω"],
 
 ###regularise_accents_to_modern_stress_END###
 
