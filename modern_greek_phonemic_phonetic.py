@@ -497,7 +497,7 @@ def iterate_phonemic(word):
 def iterate_phonetic(word):
 
     a_list = greek_split(word)
-    new_list = [sandhi(remove_acute(convert_stress(transcribed_phonetic(transcribed_phonemic(pp_phonetic(transcribed_case_and_stress(element))))))) for element in a_list]
+    new_list = [remove_acute(convert_stress(transcribed_phonetic(transcribed_phonemic(pp_phonetic(transcribed_case_and_stress(element)))))) for element in a_list]
     back_to_string = (" ".join(new_list))
 
     return(back_to_string)
@@ -505,7 +505,7 @@ def iterate_phonetic(word):
 def main(word):
 
     phonemic = "/"+iterate_phonemic(word)+"/"
-    phonetic = "["+iterate_phonetic(word)+"]"
+    phonetic = "["+sandhi(iterate_phonetic(word))+"]"
     ##remove_acute(convert_stress(transcribed_phonetic(transcribed_case_and_stress(word))))
 
     return phonemic, phonetic
