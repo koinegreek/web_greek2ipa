@@ -398,35 +398,35 @@ greek_patterns_phonetic = [
 greek_patterns_sandhi = [
 
 
-    [re.compile("n p"), "(m)b"],
-    [re.compile("n ˈp"), "(m)ˈb"],
+    [re.compile("n p"), "(m) b"],
+    [re.compile("n ˈp"), "(m) ˈb"],
 
-    [re.compile("n f"), "ɱf"],
-    [re.compile("n ˈf"), "ɱˈf"],
+    [re.compile("n f"), "ɱ f"],
+    [re.compile("n ˈf"), "ɱ ˈf"],
 
-    [re.compile("n v"), "ɱv"],
-    [re.compile("n ˈv"), "ɱˈv"],
+    [re.compile("n v"), "ɱ v"],
+    [re.compile("n ˈv"), "ɱ ˈv"],
 
-    [re.compile("n c"), "(ɲ)ɟ"],
-    [re.compile("n ˈc"), "(ɲ)ˈɟ"],
+    [re.compile("n c"), "(ɲ) ɟ"],
+    [re.compile("n ˈc"), "(ɲ) ˈɟ"],
 
-    [re.compile("n ɣ"), "ŋɣ"],
-    [re.compile("n ˈɣ"), "ŋˈɣ"],
+    [re.compile("n ɣ"), "ŋ ɣ"],
+    [re.compile("n ˈɣ"), "ŋ ˈɣ"],
 
-    [re.compile("n x"), "ŋx"],
-    [re.compile("n ˈx"), "ŋˈx"],
+    [re.compile("n x"), "ŋ x"],
+    [re.compile("n ˈx"), "ŋ ˈx"],
 
-    [re.compile("n ʝ"), "ɲʝ"],
-    [re.compile("n ˈʝ"), "ɲˈʝ"],
+    [re.compile("n ʝ"), "ɲ ʝ"],
+    [re.compile("n ˈʝ"), "ɲ ˈʝ"],
 
-    [re.compile("n ç"), "ɲç"],
-    [re.compile("n ˈç"), "ɲˈç"],
+    [re.compile("n ç"), "ɲ ç"],
+    [re.compile("n ˈç"), "ɲ ˈç"],
 
-    [re.compile("n k"), "(ŋ)g"],
-    [re.compile("n ˈk"), "(ŋ)ˈg"],
+    [re.compile("n k"), "(ŋ) g"],
+    [re.compile("n ˈk"), "(ŋ) ˈg"],
 
-    [re.compile("n t"), "(n)d"],
-    [re.compile("n ˈt"), "(n)ˈd"],
+    [re.compile("n t"), "(n) d"],
+    [re.compile("n ˈt"), "(n) ˈd"],
 
     [re.compile(f"s̠(?= [{greek_ipa_voiced_consonants}|ˈ{greek_ipa_voiced_consonants}])"), "z̠"],
 
