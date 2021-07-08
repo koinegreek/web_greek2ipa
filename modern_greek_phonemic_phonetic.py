@@ -115,15 +115,6 @@ new_pattern14 = "o̞"
 pattern15 = "ú"
 new_pattern15 = "u"
 
-pattern91 = f"(n)({space})([p|ˈp])"
-new_pattern91 = r"(m)\2b"
-
-pattern92 = f"(n)({space})([t|ˈt])"
-new_pattern92 = r"(n)\2d"
-
-pattern93 = f"(n)({space})([f|ˈf])"
-new_pattern93 = r"ɱ\2\3"
-
 
 
 greek_patterns_case_and_stress = [
@@ -404,6 +395,13 @@ greek_patterns_phonetic = [
 ]
 
 
+greek_patterns_sandhi = [
+
+
+    [re.compile("n p"), "(m)b"],
+    [re.compile("n ˈp"), "(m)b"],
+
+]
 
 def transcribed_case_and_stress(word):
     """Transcribe a Greek word"""
@@ -432,6 +430,12 @@ def transcribed_phonemic(word):
 def transcribed_phonetic(word):
     """Transcribe a Greek word"""
     for pattern, replace in greek_patterns_phonetic:
+        word = pattern.sub(replace, word)
+    return word
+
+def sandhi(word):
+    """Transcribe a Greek word"""
+    for pattern, replace in greek_patterns_sandhi:
         word = pattern.sub(replace, word)
     return word
 
@@ -476,15 +480,6 @@ def remove_acute(word):
 def greek_split(word):
     return word.split()
 
-def sandhi(word):
-    if re.search(pattern91, word):
-        return re.sub(pattern91, new_pattern91, word)
-    elif re.search(pattern92, word):
-        return re.sub(pattern92, new_pattern92, word)
-    elif re.search(pattern93, word):
-        return re.sub(pattern93, new_pattern93, word)
-    else:
-        return word
 
 def iterate_phonemic(word):
 
