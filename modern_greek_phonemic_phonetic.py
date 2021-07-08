@@ -115,13 +115,13 @@ new_pattern14 = "o̞"
 pattern15 = "ú"
 new_pattern15 = "u"
 
-pattern91 = f"(ν)({space})([p|ˈp])"
+pattern91 = f"(n)({space})([p|ˈp])"
 new_pattern91 = r"(m)\2b"
 
-pattern92 = f"(ν)({space})([t|ˈt])"
+pattern92 = f"(n)({space})([t|ˈt])"
 new_pattern92 = r"(n)\2d"
 
-pattern93 = f"(ν)({space})([f|ˈf])"
+pattern93 = f"(n)({space})([f|ˈf])"
 new_pattern93 = r"ɱ\2\3"
 
 
