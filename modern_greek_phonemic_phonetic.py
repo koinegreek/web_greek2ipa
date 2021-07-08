@@ -404,14 +404,32 @@ greek_patterns_sandhi = [
     [re.compile("n f"), "ɱf"],
     [re.compile("n ˈf"), "ɱˈf"],
 
+    [re.compile("n v"), "ɱv"],
+    [re.compile("n ˈv"), "ɱˈv"],
+
     [re.compile("n c"), "(ɲ)ɟ"],
     [re.compile("n ˈc"), "(ɲ)ˈɟ"],
+
+    [re.compile("n ɣ"), "ŋɣ"],
+    [re.compile("n ˈɣ"), "ŋˈɣ"],
+
+    [re.compile("n x"), "ŋx"],
+    [re.compile("n ˈx"), "ŋˈx"],
+
+    [re.compile("n ʝ"), "ɲʝ"],
+    [re.compile("n ˈʝ"), "ɲˈʝ"],
+
+    [re.compile("n ç"), "ɲç"],
+    [re.compile("n ˈç"), "ɲˈç"],
 
     [re.compile("n k"), "(ŋ)g"],
     [re.compile("n ˈk"), "(ŋ)ˈg"],
 
     [re.compile("n t"), "(n)d"],
     [re.compile("n ˈt"), "(n)ˈd"],
+
+    [re.compile(f"s̠(?= [{greek_ipa_voiced_consonants}|ˈ{greek_ipa_voiced_consonants}])"), "z̠"],
+
 
 ]
 
