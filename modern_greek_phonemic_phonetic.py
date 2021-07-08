@@ -407,6 +407,9 @@ greek_patterns_sandhi = [
     [re.compile("n c"), "(ɲ)ɟ"],
     [re.compile("n ˈc"), "(ɲ)ˈɟ"],
 
+    [re.compile("n k"), "(ŋ)g"],
+    [re.compile("n ˈk"), "(ŋ)ˈg"],
+
 ]
 
 def transcribed_case_and_stress(word):
