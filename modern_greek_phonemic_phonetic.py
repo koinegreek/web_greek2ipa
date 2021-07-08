@@ -399,7 +399,10 @@ greek_patterns_sandhi = [
 
 
     [re.compile("n p"), "(m)b"],
-    [re.compile("n ˈp"), "(m)b"],
+    [re.compile("n ˈp"), "(m)ˈb"],
+
+    [re.compile("n f"), "ɱf"],
+    [re.compile("n ˈf"), "ɱˈf"],
 
 ]
 
