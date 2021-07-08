@@ -39,6 +39,7 @@ greek_ipa_palatal_stop_consonants = "c|ɟ"
 
 left_parens = "\\("
 right_parens = "\\)"
+space = " "
 
 ##for orthography variants unicode_START (last in every list is the oxia to accent regularisation)##
 
@@ -113,6 +114,17 @@ new_pattern14 = "o̞"
 
 pattern15 = "ú"
 new_pattern15 = "u"
+
+pattern91 = f"(ν)({space})([p|ˈp])"
+new_pattern91 = r"(m)\2b"
+
+pattern92 = f"(ν)({space})([t|ˈt])"
+new_pattern92 = r"(n)\2d"
+
+pattern93 = f"(ν)({space})([f|ˈf])"
+new_pattern93 = r"ɱ\2\3"
+
+
 
 greek_patterns_case_and_stress = [
 
@@ -463,6 +475,17 @@ def remove_acute(word):
 
 def greek_split(word):
     return word.split()
+
+def sandhi(word):
+    return word.split()
+    if re.search(pattern91, word):
+        return re.sub(pattern91, new_pattern91, word)
+    elif re.search(pattern92, word):
+        return re.sub(pattern92, new_pattern92, word)
+    elif re.search(pattern93, word):
+        return re.sub(pattern93, new_pattern93, word)
+    else:
+        return word
 
 def iterate_phonemic(word):
 
