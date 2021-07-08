@@ -80,6 +80,9 @@ new_pattern3 = r"ˈ\1\2\3"
 ##when cluster has a weakened consonant##
 pattern33 = f"({left_parens})({greek_ipa_consonants})({right_parens})({greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
 new_pattern33 = r"\1\2\3ˈ\4\5\6"
+
+pattern34 = f"({left_parens})({greek_ipa_consonants})({right_parens})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
+new_pattern34 = r"\1\2\3ˈ\4\5"
 ## end of special
 
 pattern4 = f"^({greek_ipa_consonants})({greek_ipa_consonants})({greek_ipa_vowels_stressed})"
@@ -478,6 +481,8 @@ def convert_stress(word):
         return re.sub(pattern3, new_pattern3, word)
     elif re.search(pattern33, word):
         return re.sub(pattern33, new_pattern33, word)
+    elif re.search(pattern34, word):
+        return re.sub(pattern34, new_pattern34, word)
     elif re.search(pattern4, word):
         return re.sub(pattern4, new_pattern4, word)
     elif re.search(pattern5, word):
