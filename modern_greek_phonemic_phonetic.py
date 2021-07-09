@@ -40,6 +40,7 @@ greek_ipa_palatal_stop_consonants = "c|ɟ"
 left_parens = "\\("
 right_parens = "\\)"
 space = " "
+ipa_stress = "ˈ"
 
 ##for orthography variants unicode_START (last in every list is the oxia to accent regularisation)##
 
