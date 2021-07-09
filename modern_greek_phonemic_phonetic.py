@@ -433,7 +433,7 @@ greek_patterns_sandhi = [
     [re.compile("n ˈt"), "(n) ˈd"],
 
     [re.compile(f"s̠ (?={greek_ipa_voiced_consonants})"), "z̠ "],
-    [re.compile(f"s̠ (?={ipa_stress}{greek_ipa_voiced_consonants})"), "z̠ "],
+    [re.compile(f"s̠ ˈ(?={greek_ipa_voiced_consonants})"), "z̠ ˈ"],
 
 
 ]
