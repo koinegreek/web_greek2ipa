@@ -435,6 +435,80 @@ greek_patterns_sandhi = [
     [re.compile(f"s̠ (?={greek_ipa_voiced_consonants})"), "z̠ "],
     [re.compile(f"s̠ ˈ(?={greek_ipa_voiced_consonants})"), "z̠ ˈ"],
 
+##cluster syllabification
+
+    [re.compile("ɣˈl"), "ˈɣl"],
+    [re.compile("ɣˈr"), "ˈɣr"],
+    [re.compile("ɣˈn"), "ˈɣn"],
+    [re.compile("ɣˈd"), "ˈɣd"],
+
+    [re.compile("gˈl"), "ˈgl"],
+    [re.compile("gˈr"), "ˈgr"],
+    [re.compile("gˈn"), "ˈgn"],
+    [re.compile("gˈd"), "ˈgd"],
+
+    [re.compile("kˈl"), "ˈkl"],
+    [re.compile("kˈr"), "ˈkr"],
+    [re.compile("kˈn"), "ˈkn"],
+    [re.compile("kˈt"), "ˈkt"],
+    [re.compile("kˈs"), "ˈks"],
+
+    [re.compile("xˈl"), "ˈxl"],
+    [re.compile("xˈr"), "ˈxr"],
+    [re.compile("xˈn"), "ˈxn"],
+    [re.compile("xˈt"), "ˈxt"],
+    [re.compile("xˈθ"), "ˈxθ"],
+
+    [re.compile("vˈl"), "ˈvl"],
+    [re.compile("vˈr"), "ˈvr"],
+    [re.compile("vˈɣ"), "ˈvɣ"],
+    [re.compile("vˈð"), "ˈvð"],
+
+    [re.compile("bˈl"), "ˈbl"],
+    [re.compile("bˈr"), "ˈbr"],
+    [re.compile("bˈɣ"), "ˈbɣ"],
+    [re.compile("bˈð"), "ˈbð"],
+
+    [re.compile("pˈl"), "ˈpl"],
+    [re.compile("pˈr"), "ˈpr"],
+    [re.compile("pˈn"), "ˈpn"],
+    [re.compile("pˈt"), "ˈpt"],
+    [re.compile("pˈs"), "ˈps"],
+
+    [re.compile("fˈl"), "ˈfl"],
+    [re.compile("fˈr"), "ˈfr"],
+    [re.compile("fˈt"), "ˈft"],
+    [re.compile("fˈk"), "ˈfk"],
+    [re.compile("fˈθ"), "ˈfθ"],
+
+    [re.compile("ðˈl"), "ˈðl"],
+    [re.compile("ðˈr"), "ˈðr"],
+
+    [re.compile("dˈl"), "ˈdl"],
+    [re.compile("dˈr"), "ˈdr"],
+
+    [re.compile("tˈr"), "ˈtr"],
+    [re.compile("tˈn"), "ˈtm"],
+    [re.compile("tˈs"), "ˈts"],
+
+    [re.compile("θˈl"), "ˈθl"],
+    [re.compile("θˈr"), "ˈθr"],
+    [re.compile("θˈn"), "ˈθn"],
+
+    [re.compile("mˈn"), "ˈmn"],
+
+    [re.compile("s̠ˈp"), "ˈs̠p"],
+    [re.compile("s̠ˈt"), "ˈs̠t"],
+    [re.compile("s̠ˈk"), "ˈs̠k"],
+    [re.compile("s̠ˈf"), "ˈs̠f"],
+    [re.compile("s̠ˈθ"), "ˈs̠θ"],
+    [re.compile("s̠ˈx"), "ˈs̠x"],
+
+    [re.compile("z̠ˈn"), "ˈz̠n"],
+    [re.compile("z̠ˈv"), "ˈz̠v"],
+    [re.compile("z̠ˈɣ"), "ˈz̠ɣ"],
+    
+    
 
 ]
 
